@@ -1,7 +1,7 @@
 <footer class="site-footer">
  <div class="container">
     <div class="copyright">
-        <p>copyright Enes Nimani - All Rights Reserved</p>
+        <p>copyright Jon Bekolli - All Rights Reserved</p>
     </div>
     <nav class="footer-menu">
     <?php wp_nav_menu(
