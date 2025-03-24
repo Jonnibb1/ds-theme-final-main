@@ -12,13 +12,34 @@ add_action('wp_enqueue_scripts', 'ds_theme_load_scripts');
 
 
 
-register_nav_menus(
-    array(
-        'ds_theme_main_menu' => 'Main Menu',
-        'ds_theme_footer_menu' => 'Footer Menu'
-    )
+
+
+function dstheme_config(){
+    register_nav_menus(
+        array(
+            'ds_theme_main_menu' => 'Main Menu',
+            'ds_theme_footer_menu' => 'Footer Menu'
+        )
+        );
+    $args = array(
+        'height' => 225,
+        'width' => 1920
     );
 
+            add_theme_support('custom-header', $args);
+            add_theme_support('post-thumbnails');
+            add_theme_support('costum-log', array(
+                'width' => 200,
+                'height' => 110,
+                'flex-height' => true,
+                'flex-width' = true
+
+            ));
+            
+}
+
+
+add_action('after_setup_theme', 'dstheme_config', 0);
 
 
 ?>
