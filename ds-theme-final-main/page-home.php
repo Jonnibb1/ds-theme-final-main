@@ -6,9 +6,34 @@
     <div id="primary" class="content-area">
         <main id="main" class="site-main">
             <section class="hero">
-                Hero
+               <h2>Services</h2>
+               <div class="container">
+                <div class="service-item">
+                    <div class="service-item">
+                        <?php
+                        if(is_active_sidebar('service-1')){
+                            dynamic_sidebar('service-1')
+                        }
+                        ?>
+                    </div>
+                    <div class="service-item">
+                        <?php
+                        if(is_active_sidebar('service-1')){
+                            dynamic_sidebar('service-1')
+                        }
+                        ?>
+                    </div>
+                    <div class="service-item">
+                        <?php
+                        if(is_active_sidebar('service-1')){
+                            dynamic_sidebar('service-1')
+                        }
+                        ?>
+                    </div>
+                </div>
+               </div>
             </section>
-            <section class="services">
+            <section class="service">
                 Services
             </section>
             <section class="home-blog">

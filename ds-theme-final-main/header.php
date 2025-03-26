@@ -12,7 +12,7 @@
         <div class="logo">
         <?php
           if(has_custom_logo()){
-            the_costum_logo(;)
+            the_costum_logo();
           }else{
             ?>
             <a href="<?php echo home_url('/');?>"<span><?php bloginfo ('name');?></span>></a>

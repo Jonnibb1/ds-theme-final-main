@@ -32,7 +32,7 @@ function dstheme_config(){
                 'width' => 200,
                 'height' => 110,
                 'flex-height' => true,
-                'flex-width' = true
+                'flex-width' => true
 
             ));
             
@@ -40,6 +40,54 @@ function dstheme_config(){
 
 
 add_action('after_setup_theme', 'dstheme_config', 0);
+add_action('widgets_init', 'dstheme_sidebars');
+
+function dstheme_sidebars (){
+    register_sidebar( 
+    array(
+        'name' => 'Blog Sidebar',
+        'id' => 'sidebar-blog',
+        'description' => 'This is the blog Sidebar. You can add your widgets here',
+        'before_widget' => '<div class = "widget-wrapper>"',
+        'after_widget' => '</div>',
+        'before_title' => '<h4 class = "widget-title">'
+    )
+
+    );
+    register_sidebar( 
+        array(
+            'name' => 'Service 1',
+            'id' => 'sidebar-1',
+            'description' => 'First Service Area',
+            'before_widget' => '<div class = "widget-wrapper>"',
+            'after_widget' => '</div>',
+            'before_title' => '<h4 class = "widget-title">'
+        )
+    
+        );
+        register_sidebar( 
+            array(
+                'name' => 'Service 2',
+                'id' => 'sidebar-2',
+                'description' => 'Second Service Area',
+                'before_widget' => '<div class = "widget-wrapper>"',
+                'after_widget' => '</div>',
+                'before_title' => '<h4 class = "widget-title">'
+            )
+        
+            );
+            register_sidebar( 
+                array(
+                    'name' => 'Service 3',
+                    'id' => 'sidebar-3',
+                    'description' => 'Third Service Area',
+                    'before_widget' => '<div class = "widget-wrapper>"',
+                    'after_widget' => '</div>',
+                    'before_title' => '<h4 class = "widget-title">'
+                )
+            
+                );
+}
 
 
 ?>
